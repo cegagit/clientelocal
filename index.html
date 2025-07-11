@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clients Database</h1>
+    <button onclick="loadClients()">Load Clients</button>
+    <table id="clientsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Client rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <h2>Add New Client</h2>
+    <form id="addClientForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+        <button type="submit">Add Client</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
