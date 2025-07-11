@@ -86,7 +86,7 @@ app.patch('/clients/:id', getClient, async (req, res) => {
 // Delete a client
 app.delete('/clients/:id', getClient, async (req, res) => {
   try {
-    await res.client.remove();
+    await Client.findByIdAndDelete(req.params.id);
     res.json({ message: 'Deleted Client' });
   } catch (err) {
     res.status(500).json({ message: err.message });
